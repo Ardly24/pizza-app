@@ -1,0 +1,92 @@
+.cartItems{
+    margin:30px auto;
+    width:80%;
+    height: 100%;
+    background-color: rgb(197, 195, 195);
+    padding-bottom: 2px;
+   
+}
+
+.cartItems .cartItemsHeader{
+ width: 100%;
+ height: 100%;
+ background-color:  rgb(18, 146, 52);
+ display: flex;
+ justify-content:space-around;
+ font-weight: 500;
+padding: 10px;
+font-size: 25px;
+color: #fff;
+}
+
+.empty{
+  padding-top:  20px;
+  display: flex;
+  justify-self: start;
+  margin: 10px
+}
+.toMenu{
+    color: red;
+    margin-left: 10px;
+    font-weight: 600;
+}
+.cartList{
+    width:100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+}
+
+.itemImg{
+    width: 10%;
+    height: 10%;
+}
+
+.btnAdd{
+    padding: 5px;
+    cursor: pointer;
+    margin: 8px
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: right;
+   font-weight: 700;
+   font-size:20px;
+   margin: 15px;
+}
+
+.cartItems .btn{
+    margin: 40px 0px 10px 10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.btnBack{
+    padding: 10px 10px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    background: rgb(179, 173, 173);
+    color:#000;
+    border: 1px solid gray;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10%;
+  }
+
+@media screen and (max-width: 600px){
+       .cartItems{
+        width:90%;
+        } 
+
+        .btnBack{
+            margin-left: 5%;
+        }
+     }
+     
+ 
+ 
