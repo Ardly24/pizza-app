@@ -2,7 +2,8 @@ import '../Styles/About.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import React from 'react';
-
+import {FaDirections} from 'react-icons/fa'
+import {AiOutlineClockCircle,AiOutlinePhone } from 'react-icons/ai'
 
 const About = ({cartItems}) => {
   return (
@@ -12,13 +13,20 @@ const About = ({cartItems}) => {
   <div className='about'>
     <div className='left'>
       <h1>About Us</h1>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      <p>Ardlight's Pizzeria is a family restaurant based in  Roodeport, Johannesburg, which has been around since 2017. We strive for consistent quality in the preparation of fresh flavourful delicious pizza. Family owned, family run, your home away from home!</p><br/>
+
+       <div className='info'>
+        <AiOutlinePhone /> <p>+27 813 399 459</p> <br/>
+        <FaDirections /> <p>Directions</p><br/>
+        <AiOutlineClockCircle /> <p>Open Now</p>
       </div>
+      </div>
+      
      
      <div className='right'>
      <div className="form">
             <h1 className="contact-heading"> Contact Us</h1>
-            <form >
+            <form className='contactForm'>
                 <label>Your Name</label>
                 <input type="text" name="user_name" />
 

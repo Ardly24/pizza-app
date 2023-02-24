@@ -24,7 +24,6 @@ export default function Navbar(props){
     return(
         <div className={color ? "header header-bg" : "header"}>
             <Link to="/">
-        
             <img className='logo' src={logo}/>
            </Link>
 

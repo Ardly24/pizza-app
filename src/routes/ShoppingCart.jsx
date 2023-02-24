@@ -10,7 +10,7 @@ const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem}) => {
    const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0)
 
   return (
- <>
+ <div className='cart'>
    <div className='cartItems'>
     <div className='cartItemsHeader'>Shopping Cart</div>
     {cartItems.length === 0 && (
@@ -27,7 +27,7 @@ const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem}) => {
                alt={item.name}
             />
             <div className='itemName'>{item.name}</div>
-            <div>Quantity:{item.quantity}</div>
+            <div>Quantity:  {item.quantity}</div>
             <div>
               <button className='btnAdd' onClick={()=>handleAddItem(item)}>
                 +
@@ -42,18 +42,21 @@ const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem}) => {
        ))}
        <hr />
     </div>
-        {cartItems.length > 0 && (<div className='totalPrice'>Total Price:  R {totalPrice}
+        {cartItems.length > 0 && (<div className='totalPrice'>Sub Total:  R {totalPrice}
+        <h3>15% VAT</h3>
+        <h3>Total price: R  {Math.round((totalPrice * 1.15)*100)/100}</h3>
         </div>)}
         
-        {cartItems.length > 0 && (<button className='btn'>Proceed to Checkout</button>)}
+        {cartItems.length > 0 && (<Link to="/checkout" className='btn'>Proceed to Checkout</Link> )}
    </div>
+        
       {cartItems.length > 0 &&(
         <div>
           <Link to="/menu"
-           className="btnBack"><IoMdArrowRoundBack size="1rem"/> Back</Link>  
+           className="btnBack"><IoMdArrowRoundBack size="1.5rem"/> Back</Link>  
         </div>
       )}
-   </>
+   </div>
 
   )
 }

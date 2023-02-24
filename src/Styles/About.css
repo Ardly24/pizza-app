@@ -32,6 +32,10 @@
     max-width: 800px;
 }
 
+.left .info{
+color: rgb(37, 37, 229);
+font-size: 20px;
+}
 
 .about .right{
     width: 550px;
@@ -48,14 +52,14 @@ label{
     margin-bottom: 0.5rem;
 }
 
-form{
+.contactForm{
     display: flex;
     flex-direction: column;
     padding:1rem;
     max-width: 500px;
 }
 
-form input, form textarea{
+.contactForm input, .contactForm textarea{
     margin-bottom: 1rem;
     padding: px 12px;
     font-size: 1.2rem;

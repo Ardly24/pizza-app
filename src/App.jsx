@@ -1,14 +1,21 @@
 import { React, useState } from 'react'
 import Home from './routes/Home'
 import Menu from './routes/Menu'
+import Drinks from './routes/Drinks'
 import About from './routes/About'
 import ShoppingCart from './routes/ShoppingCart'
+import CheckOut from './routes/CheckOut'
 import MenuData from './components/MenuList'
+import drinksData from './components/drinksData'
 
 import {Route, Routes} from 'react-router-dom'
 
+
 function App() {
   const {menuItems} = MenuData;
+  const {juiceItems} = drinksData;
+  const {softDrinks} = drinksData;
+
   const [cartItems, setCartItems] =useState([])
 
   const handleAddItem =(product) =>{
@@ -39,9 +46,11 @@ function App() {
   return (
     <Routes>
        <Route path="/" element={<Home cartItems={cartItems}/>}/>
-        <Route path="/menu" element={<Menu menuItems={menuItems}  cartItems={cartItems} handleAddItem={handleAddItem} /> } />
+        <Route path="/menu" element={<Menu menuItems={menuItems}  cartItems={cartItems} handleAddItem={handleAddItem} juiceItems={juiceItems} /> } />
        <Route path="/about"  element={<About  cartItems={cartItems}/>} />
+      <Route path="drinks" element={<Drinks juiceItems={juiceItems} softDrinks={softDrinks} menuItems={menuItems} handleAddItem={handleAddItem} cartItems={cartItems}/>}/>
       <Route path="/cart" element={<ShoppingCart  menuItems={menuItems} cartItems={cartItems} handleAddItem={handleAddItem}  handleRemoveItem={handleRemoveItem}/>}/>
+      <Route path="checkout" element={<CheckOut  menuItems={menuItems} cartItems={cartItems}/>}/>
     </Routes>
   )
 }

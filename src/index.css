@@ -34,7 +34,7 @@ ul{
 
 .btn-light{
   background: transparent;
-  color: #fff;
+  color: rgb(18, 146, 52);
 }
 
 .btn:hover{
@@ -43,3 +43,7 @@ ul{
   transition: 0.3s;
 }
 
+.btn-light:hover{
+  background:  rgb(18, 146, 52);
+  color:#000;
+}

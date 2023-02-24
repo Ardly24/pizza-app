@@ -1,3 +1,5 @@
+
+
 .cartItems{
     margin:30px auto;
     width:80%;
@@ -54,25 +56,26 @@ color: #fff;
 
 .totalPrice{
     display: flex;
-    justify-content: right;
-   font-weight: 700;
-   font-size:20px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: end;
+   font-weight: 600;
+   font-size:18px;
    margin: 15px;
+
 }
 
 .cartItems .btn{
     margin: 40px 0px 10px 10px;
     display: flex;
-    justify-content:space-around;
+    width:260px;
 }
 
 .btnBack{
     padding: 10px 10px;
     font-size: 1.1rem;
-    text-transform: uppercase;
-    background: rgb(179, 173, 173);
+    text-transform: uppercase; 
     color:#000;
-    border: 1px solid gray;
     font-weight: 600;
     cursor: pointer;
     margin-left: 10%;
@@ -82,7 +85,6 @@ color: #fff;
        .cartItems{
         width:90%;
         } 
-
         .btnBack{
             margin-left: 5%;
         }
