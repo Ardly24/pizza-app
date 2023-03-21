@@ -8,7 +8,7 @@ const Home = ({cartItems}) => {
   return (
     <div>
      <Navbar  size={cartItems.length}/>
-     <HeroImg />
+     <HeroImg/>
      <Footer/>
     </div>
   )

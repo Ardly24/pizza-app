@@ -5,8 +5,9 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 
-const Menu = ({cartItems,menuItems,handleAddItem}) => {
+const Menu = ({cartItems,menuItems,handleAddItem, Rand}) => {
   const [isShown, setIsShown] = useState(false);
+
 
   const menuList = menuItems.map( item =>{
     return (
@@ -17,7 +18,7 @@ const Menu = ({cartItems,menuItems,handleAddItem}) => {
       >
       <img className='menu--image' src={item.imgUrl}/>
       <h2>{item.name}</h2>
-      <p>R {item.price}</p> 
+      <p>{Rand.format(item.price)}</p> 
      <button className='btn' onClick={() =>handleAddItem(item)}>Add to cart</button>
       {isShown && cartItems.length >0 &&(
           <Link to="/cart"

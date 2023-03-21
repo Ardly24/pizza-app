@@ -5,7 +5,7 @@ import React from 'react'
 import {IoMdArrowRoundBack} from 'react-icons/io'
 
 
-const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem}) => {
+const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem, Rand}) => {
 
    const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0)
 
@@ -37,14 +37,14 @@ const ShoppingCart = ({cartItems, handleAddItem, handleRemoveItem}) => {
               </button>
             </div>
              
-            <div>R {item.price * (item.quantity)}</div>
+            <div>{Rand.format(item.price *(item.quantity))}</div>
           </div>
        ))}
        <hr />
     </div>
-        {cartItems.length > 0 && (<div className='totalPrice'>Sub Total:  R {totalPrice}
-        <h3>15% VAT</h3>
-        <h3>Total price: R  {Math.round((totalPrice * 1.15)*100)/100}</h3>
+        {cartItems.length > 0 && (<div className='totalPrice'>Total price:  {Rand.format(totalPrice)}
+        {/* <h3>15% VAT</h3>
+        <h3>Total price: R  {Math.round((totalPrice * 1.15)*100)/100}</h3> */}
         </div>)}
         
         {cartItems.length > 0 && (<Link to="/checkout" className='btn'>Proceed to Checkout</Link> )}

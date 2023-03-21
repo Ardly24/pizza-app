@@ -43,13 +43,19 @@ function App() {
 
   }
 
+  //format currency
+  const Rand = new Intl.NumberFormat('en-ZA', {
+    style: 'currency',
+    currency: 'ZAR',
+});
+
   return (
     <Routes>
        <Route path="/" element={<Home cartItems={cartItems}/>}/>
-        <Route path="/menu" element={<Menu menuItems={menuItems}  cartItems={cartItems} handleAddItem={handleAddItem} juiceItems={juiceItems} /> } />
+        <Route path="/menu" element={<Menu menuItems={menuItems}  cartItems={cartItems} handleAddItem={handleAddItem} juiceItems={juiceItems} Rand={Rand} /> } />
        <Route path="/about"  element={<About  cartItems={cartItems}/>} />
-      <Route path="drinks" element={<Drinks juiceItems={juiceItems} softDrinks={softDrinks} menuItems={menuItems} handleAddItem={handleAddItem} cartItems={cartItems}/>}/>
-      <Route path="/cart" element={<ShoppingCart  menuItems={menuItems} cartItems={cartItems} handleAddItem={handleAddItem}  handleRemoveItem={handleRemoveItem}/>}/>
+      <Route path="drinks" element={<Drinks juiceItems={juiceItems} softDrinks={softDrinks} menuItems={menuItems} handleAddItem={handleAddItem} cartItems={cartItems} Rand={Rand}/>}/>
+      <Route path="/cart" element={<ShoppingCart  menuItems={menuItems} cartItems={cartItems} handleAddItem={handleAddItem}  handleRemoveItem={handleRemoveItem} Rand={Rand}/>}/>
       <Route path="checkout" element={<CheckOut  menuItems={menuItems} cartItems={cartItems}/>}/>
     </Routes>
   )

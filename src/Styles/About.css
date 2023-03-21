@@ -25,6 +25,13 @@
 
 }
 
+
+.aboutUs .left a{
+    color:#000;
+    text-decoration: underline;
+    color: blue;
+}
+
 .about .left{
     text-align: center;
     margin-right:px;
@@ -32,9 +39,11 @@
     max-width: 800px;
 }
 
-.left .info{
+.info{
 color: rgb(37, 37, 229);
-font-size: 20px;
+display: flex;
+flex-direction: column;
+font-size: 18px;
 }
 
 .about .right{

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const Drinks = ({juiceItems, softDrinks, cartItems,handleAddItem}) => {
+const Drinks = ({juiceItems, softDrinks, cartItems,handleAddItem, Rand}) => {
     const [isShown, setIsShown]=useState(false);
 
     const [formData, setFormData]= useState({drinkType: ""})
@@ -30,7 +30,7 @@ const Drinks = ({juiceItems, softDrinks, cartItems,handleAddItem}) => {
           >
           <img className='menu--image' src={item.imgUrl}/>
           <h2>{item.name}</h2>
-          <p>R {item.price}</p>
+          <p>{Rand.format(item.price)}</p> 
           <button className='btn' onClick={() =>handleAddItem(item)}>Add to cart</button>
           {isShown && cartItems.length >0 &&(
           <Link to="/cart"
@@ -50,7 +50,7 @@ const Drinks = ({juiceItems, softDrinks, cartItems,handleAddItem}) => {
           >
           <img className='menu--image' src={item.imgUrl}/>
           <h2>{item.name}</h2>
-          <p>R {item.price}</p>
+          <p>{Rand.format(item.price)}</p> 
           <button className='btn' onClick={() =>handleAddItem(item)}>Add to cart</button>
           {isShown && cartItems.length >0 &&(
           <Link to="/cart"
