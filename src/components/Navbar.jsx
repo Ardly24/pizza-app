@@ -23,13 +23,13 @@ export default function Navbar(props){
   window.addEventListener("scroll", changeColor);
     return(
         <div className={color ? "header header-bg" : "header"}>
-            <Link to="/">
+            <Link to="/pizza-app">
             <img className='logo' src={logo}/>
            </Link>
 
         <ul className={click ? 'nav-menu active': 'nav-menu'}>
             <li>
-                <Link to="/">Home</Link>
+                <Link to="/pizza-app">Home</Link>
             </li>
             <li>
                 <Link to="/menu">Menu</Link>

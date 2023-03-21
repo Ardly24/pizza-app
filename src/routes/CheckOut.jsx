@@ -118,7 +118,7 @@ const CheckOut = ({cartItems}) => {
         <input type="text" name="user_name" placeholder='CVC/CVV'/>
            <div>
             <button className="btn">Pay now</button>
-            <Link to="/"
+            <Link to="/pizza-app"
              className="btn">Cancel</Link> 
             </div>
         </form>

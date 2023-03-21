@@ -51,7 +51,7 @@ function App() {
 
   return (
     <Routes>
-       <Route path="/" element={<Home cartItems={cartItems}/>}/>
+       <Route path="/pizza-app" element={<Home cartItems={cartItems}/>}/>
         <Route path="/menu" element={<Menu menuItems={menuItems}  cartItems={cartItems} handleAddItem={handleAddItem} juiceItems={juiceItems} Rand={Rand} /> } />
        <Route path="/about"  element={<About  cartItems={cartItems}/>} />
       <Route path="drinks" element={<Drinks juiceItems={juiceItems} softDrinks={softDrinks} menuItems={menuItems} handleAddItem={handleAddItem} cartItems={cartItems} Rand={Rand}/>}/>
